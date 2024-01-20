@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/ex-reg.css">
+</head>
+<body>
+    <form action="">
+        <input type="text" placeholder="Введите логин"> <br><br>
+        <input type="password" placeholder="Введите пароль"> <br> <br>
+        <input type="password" placeholder="Повторите пароль пароль"> <br> <br>
+        <button type="button">Зарегистрироваться</button>
+    </form>
+    <script>
+        function checkLogin(){
+            if(gh){
+
+            }
+            else{
+
+            }
+        }
+        function checkPass(){
+            if(gh){
+
+                rez.innerHTML='Должно быть не менее <br> 6 символов';
+                pass.style.borderColor='tomato';
+            }
+            else{
+                pass.style.borderColor='seagreen';
+                rez.innerText='';
+            }
+        }
+
+        function checkRepass(){
+            if (pass.value!==revass.value){
+                rez.innerText="Пароли не совпадают";
+                pass.style.borderColor="tomato";
+                repass.style.borderColor="tomato";
+            }
+            else{
+                pass.style.borderColor="seagreen";
+                repass.style.borderColor="seadreen";
+                rez.innerText="";
+            }
+        }
+
+        login.addEventListener('blur', checkLogin);
+        pass.addEventListener('bluh', checkPass);
+        repass.addEventListener('bluh', checkRepass);
+    </script>
+</body>
+</html>

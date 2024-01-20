@@ -1,0 +1,194 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выживание в  школе</title>
+    <link rel="stylesheet" href="style/page2.css">
+    <!--
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <div>
+            <a href="index.html"><img src="pic/icon.png" class="logo_img"> </a>
+            </div>
+            <div class="logo_txt">
+                Выживание <br> в  школе
+            </div>
+        </div>
+        <div class="menu_btn">
+            <div class=btn>
+                <a href="page1.html">О нас</a>
+            </div>
+            
+            <div class="btn">
+                <a href="page2.html">Наши курсы</a>
+            </div>
+            
+            <div class="btn">
+                <a href="page3.html">Отзывы</a>
+            </div>
+    </nav>
+
+    <div class="rain front-row"></div>
+    <div class="rain back-row"></div>
+
+    <div class="txt_home">
+        <div class="flex">
+            <div class="txt">
+                Наши курсы
+            </div>
+        </div>
+        
+        
+        <div class="space-between">
+            
+
+            
+                <div class="curse">
+                    <div class="curse_name">
+                        Базовый пак
+                    </div>
+
+                    <div class="curse_img">
+                        <img src="pic/base_pakc.jpg" width="300px"   >
+                    </div>
+
+                    <div class="curse_txt">
+                        <li>Как ненадоедать учителям</li>
+                        <li>Как списывать на контрольных</li>
+                        <li>Как получать хорошие оценки почти даром</li>
+                    </div>
+
+                    <button onclick="openPop(document.querySelector('#p0'))">
+                        500 &#8381;
+                    </button>
+                    
+                </div>
+
+                <div class="curse">
+                    <div class="curse_name">
+                        Професианальный пак
+                    </div>
+
+                    <div class="curse_img">
+                        <img src="pic/Prof_pakc.jpg" width="300px">
+                    </div>
+
+                    <div class="curse_txt">
+                        <li>Все что было в предыдушем  плюс </li>
+                        <li>как списать на впр и ответы на них</li>
+                    </div>
+                    
+                    <button onclick="openPop(document.querySelector('#p0'))">
+                        1500 &#8381;
+                    </button>
+                </div>
+            
+                <div class="curse">
+                    <div class="curse_name">
+                        Идеальный пак
+                    </div>
+
+                    <div class="curse_img">
+                        <img src="pic/Ideal_pakc.jpg" width="300px">
+                    </div>
+                    
+                    <div class="curse_txt">
+                        <li>Все что было в предыдушем  плюс</li>
+                        <li>как списать ОГЭ/ЕГЭ и ответы на них</li>
+                    </div>
+                    
+                    <button onclick="openPop(document.querySelector('#p0'))">
+                        2500 &#8381;
+                    </button>
+                </div>  
+            
+        </div>
+        
+    </div>
+    <footer>
+        <div class="txt_footer">
+            <a href="pic/123/dist/index.html" class="txt_footer">&#169;2023 Давыдов Максим &#9773;</a>.
+        </div>
+        <div class="menu_2">
+            <li><a href="page1.html">О нас</a></li>   <br>
+            <li><a href="page2.html">Наши курсы</a></li> <br>
+            <li><a href="page3.html">Отзывы</a></li> <br>
+        </div>
+        <div class="contact">
+            <div>
+                <a href="https://vk.com/addbf" class="vk">
+                    Vk
+                </a>    
+            </div>
+        </div>
+    </footer>
+
+    <div class="popup" id="p0">
+        <div class="popc">
+          <h2>Просим прощения!</h2>
+          В данный момент покупка данного продукта преостановленна всвязя с проблемами с роскомнадзором!
+          <br>
+          <br>
+          Приносим наши извенения!        
+          
+          <button onclick="closePop(document.querySelector('#p0'))">x</button>
+        </div>
+    </div>
+    
+    <script>
+        //pops
+        function openPop(el) {
+            disableScrolling();
+            el.style.height = "100%";
+            el.style.opacity = "1";
+        }
+
+        function closePop(el) {
+            enableScrolling();
+            el.style.height = "0%";
+            el.style.opacity = "0";
+        }
+
+        function disableScrolling() {
+            let x = window.scrollX;
+            let y = window.scrollY;
+            window.onscroll = function () {
+                window.scrollTo(x, y);
+            };
+        }
+
+        function enableScrolling() {
+            window.onscroll = function () {};
+        }
+
+    </script>
+
+
+
+        function random(min, max) {
+        
+            var rand = min + Math.random() * (max + 1 - min);
+            rand = Math.floor(rand);
+            
+            return rand;
+            
+        }
+
+        for (var i=0; i<200; i++) {
+        
+            document.getElementsByTagName('body')[0].innerHTML += '<i class="rain" style="left: '+random(-2000, 2000)+'px;transform: translate3d(0, 0, 0);animation-delay: '+(0.01 * i)+'s"></i>';
+        
+        }
+        
+    </script>
+
+</body>
+</html>

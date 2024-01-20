@@ -1,0 +1,36 @@
+body{
+    background: royalblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    background: blanchedalmond;
+    border-radius: 20px;
+    padding: 30px;
+}
+input{
+    padding: 5px 10px;
+    border-radius: 5px;
+    border-color: azure;
+    color: #444;
+    border: 1px solid;
+}
+
+input:focus{
+    outline: 0;
+}
+
+button{
+    
+    background-color: green;
+    color: #fff;
+    text-align: center;
+    border: 0;
+    padding: 5px;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+
+}
